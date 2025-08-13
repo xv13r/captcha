@@ -39,7 +39,7 @@ func NewAudio(id string, digits []byte, lang string) *Audio {
 	if sounds, ok := digitSounds[lang]; ok {
 		a.digitSounds = sounds
 	} else {
-		a.digitSounds = digitSounds["es"]
+		a.digitSounds = digitSounds["en"]
 	}
 	numsnd := make([][]byte, len(digits))
 	nsdur := 0

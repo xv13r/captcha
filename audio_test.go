@@ -25,7 +25,7 @@ func BenchmarkAudioWriteTo(b *testing.B) {
 	id := randomId()
 	b.StartTimer()
 	for i := 0; i < b.N; i++ {
-		a := NewAudio(id, d, "")
+		a := NewAudio(id, d, "es")
 		n, _ := a.WriteTo(ioutil.Discard)
 		b.SetBytes(n)
 	}
