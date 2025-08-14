@@ -138,8 +138,7 @@ func (a *Audio) makeBackgroundSound(length int) []byte {
 
 func (a *Audio) randomizedDigitSound(n byte) []byte {
 	s := a.randomSpeed(a.digitSounds[n])
-	//setSoundLevel(s, a.rng.Float(0.75, 1.2))
-	setSoundLevel(s, a.rng.Float(0.90, 1.00))
+	setSoundLevel(s, a.rng.Float(0.75, 1.2))
 	return s
 }
 
@@ -154,8 +153,7 @@ func (a *Audio) longestDigitSndLen() int {
 }
 
 func (a *Audio) randomSpeed(b []byte) []byte {
-	//pitch := a.rng.Float(0.9, 1.2)
-	pitch := a.rng.Float(0.96, 1.06)
+	pitch := a.rng.Float(0.9, 1.2)
 	return changeSpeed(b, pitch)
 }
 
